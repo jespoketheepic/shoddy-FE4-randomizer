@@ -1,0 +1,186 @@
+Sigurd    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|110% | 20% | 30% | 10% | 30% | 55% | 50% | 25% |
+
+Noish     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 30% | 40% | 25% | 35% | 10% | 25% | 35% | 15% |
+
+Alec      
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 40% | 30% | 40% | 40% | 30% | 20% | 15% | 10% |
+
+Arden     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 50% | 35% | 15% |  5% | 15% | 40% | 20% | 30% |
+
+Finn (G1) 
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 70% | 55% | 30% | 50% |  5% | 35% | 10% |  5% |
+
+Quan      
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|110% | 15% | 50% |  0% | 65% | 45% |  0% | 15% |
+
+Midir     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 80% | 55% |  5% | 25% |  5% | 15% | 10% | 25% |
+
+Levin     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 60% |  5% | 20% | 50% | 55% | 10% | 35% | 60% |
+
+Chulainn  
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 40% | 40% |  0% | 45% | 10% | 70% | 15% | 55% |
+
+Azelle    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 60% | 25% | 20% | 25% | 30% | 25% | 30% | 20% |
+
+Jamke     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 20% | 30% | 30% | 15% | 20% | 25% | 35% | 45% |
+
+Claude    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|130% | 35% | 20% | 30% |  5% | 35% | 15% | 50% |
+
+Beowolf   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 90% | 10% | 35% | 25% |  5% | 30% | 50% |  5% |
+
+Lex       
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 90% | 35% | 20% | 35% |  0% | 25% | 25% | 20% |
+
+Dew       
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 30% | 45% | 25% | 40% | 50% | 35% | 25% | 10% |
+
+Deirdre   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|100% | 20% | 40% | 40% | 30% | 15% | 15% | 25% |
+
+Ethlin    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 70% | 30% |  0% |  5% | 35% | 30% | 25% | 15% |
+
+Lachesis  
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 70% | 15% | 15% | 30% | 20% | 25% | 25% | 20% |
+
+Ayra      
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 90% | 25% | 35% | 15% |  0% | 45% | 25% | 15% |
+
+Erinys    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 30% | 45% | 25% | 10% | 20% | 30% | 10% | 10% |
+
+Tailtiu   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 50% | 25% |  5% | 35% | 15% | 30% | 45% | 50% |
+
+Sylvia    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 70% | 40% | 20% |  5% | 25% | 15% |  5% | 20% |
+
+Edain     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 60% | 20% | 35% | 25% | 15% | 25% | 15% | 55% |
+
+Brigid    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 70% | 25% | 25% | 35% | 40% | 20% | 40% | 20% |
+
+----------------------------------------
+
+Shannan   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|110% | 20% | 20% | 40% | 20% | 35% | 40% | 30% |
+
+Rodelbahn 
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 60% | 35% |  5% | 25% | 15% | 30% | 40% | 30% |
+
+Asaello   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 10% | 50% |  5% | 55% | 35% | 35% | 10% | 20% |
+
+Johan     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 80% | 30% | 30% |  5% | 20% | 35% | 50% | 35% |
+
+Sharlow   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 30% | 25% | 10% | 35% | 35% | 35% | 20% | 30% |
+
+Hawk      
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 40% | 15% |  5% | 30% | 10% | 45% | 40% | 15% |
+
+Tristan   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 50% | 35% | 35% |  5% | 20% |  0% | 40% | 35% |
+
+Finn (G2) 
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 90% | 30% | 30% |  5% |  5% | 25% | 35% | 55% |
+
+Dimna     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 50% | 50% | 25% | 30% | 15% | 25% | 15% | 40% |
+
+Hannibal  
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|  0% |  5% | 35% | 35% |  5% | 35% |  5% | 30% |
+
+Ares      
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|140% | 55% | 25% | 15% |  5% | 70% | 65% | 25% |
+
+Amid      
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 70% | 40% | 45% | 15% |  0% | 50% | 40% | 30% |
+
+Oifey     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|100% | 75% |  0% | 15% | 20% | 35% | 40% | 20% |
+
+Daisy     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 90% | 20% | 10% | 15% | 35% | 15% | 35% | 10% |
+
+Radney    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 90% | 30% |  5% | 25% |  5% | 55% | 35% | 20% |
+
+Mana      
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 40% | 25% | 20% | 40% | 20% | 25% |  0% | 25% |
+
+Julia     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|140% | 10% | 45% | 50% | 45% | 10% | 35% | 30% |
+
+Femina    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 40% | 25% | 35% | 20% | 20% | 45% |  5% | 50% |
+
+Linda     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 40% | 50% | 40% | 10% | 10% | 20% | 20% | 45% |
+
+Laylea    
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 20% | 65% | 15% |  5% | 55% | 10% | 50% |  5% |
+
+Janne     
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+| 30% | 20% | 45% |  5% | 75% | 10% | 15% | 15% |
+
+Johalva   
+|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |
+|120% | 35% | 30% |  5% | 30% | 15% | 15% | 40% |
+

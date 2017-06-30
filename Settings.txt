@@ -1,0 +1,41 @@
+11341121
+^These numbers are the setings^
+
+Put 0 if you don't want it randomized (Except Pursuit, as explained below)
+Bases(0/1)
+Growths(0/1)
+Skills(0/1/2/3)
+Pursuit rate(0/1/2/.../9)
+Holy Blood growths(0/1)
+Holy Weapon bonuses(0/1/2)
+Sellable Holy Weapons(0/1)
+Holy Blood allocation(0/1/2/3/4)
+
+Notes on Pursuit rate:
+- Numbers from 1-9 sets the rate of Pursuit to other skills.
+- 0 gives everyone Pursuit.
+- If you set Skills 1 and Pursuit rate 0 everyone gets Pursuit and nothing else.
+
+Note on Holy Weapon bonuses:
+- 1 excludes Tyrfing and Book of Naga as insurance against the chapter 9 and 10 bosses respectively. 2 throws them in the mix too.
+
+Notes on Holy Blood allocation:
+- Stacking lots of holy blood on a kid might cause growth overflow.
+- 1 gives everyone 1 more holy blood than normal.
+- 2 gives everyone 1 random major holy blood.
+- 3 gives everyone 1 random major holy blood + how many they have normally.
+- 4 gives everyone completely random holy blood (BEWARE: This results in crazy high growth rates, and potentially bugs i cant even imagine.)
+
+Other Notes:
+- Sword skills can end up on non-sword classes as duds.
+- Base HP is not randomized.
+- The Log shows growth rates with Holy Blood growths included.
+- Remember that Julia does not inherit. Not even skills.
+- I have manually made it so Julia will always have Nihil (To greatly increase the odds of the game being actually beatable)
+- HP growth allocated to other stats counts for half, and vice versa.
+- The randomizer is slightly biased in favor of HP growth in several small ways.
+- Growths cap at 150% and Holy Blood growths at 30% to avoid growth overflow.
+- I dont reccomend randomizing Holy blood growths if you don't do normal Growths too. It works, but is hard to keep track of.
+- Don't turn off Sellable holy weapons if you want any hope of being able to use them when randomizing Holy Blood.
+- Everything is foolproofed so that you can run the randomizer on the same ROM repeatedly. If you do this with Holy Blood allocation set to 1 or 3, you can keep adding as much holy blood as you feel like. 
+^(If you do this to the point that someone has everything, it breaks. Just run it with Holy Blood allocation on 2 to fix it)

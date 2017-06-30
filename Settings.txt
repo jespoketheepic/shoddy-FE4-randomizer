@@ -1,4 +1,4 @@
-11341121
+11340112
 ^These numbers are the setings^
 
 Put 0 if you don't want it randomized (Except Pursuit, as explained below)
@@ -24,7 +24,7 @@ Notes on Holy Blood allocation:
 - 1 gives everyone 1 more holy blood than normal.
 - 2 gives everyone 1 random major holy blood.
 - 3 gives everyone 1 random major holy blood + how many they have normally.
-- 4 gives everyone completely random holy blood (BEWARE: This results in crazy high growth rates, and potentially bugs i cant even imagine.)
+- 4 is crazy mode. It puts random numbers in the holy blood data and sees what happens. Tons of major blood is what happens.
 
 Other Notes:
 - Sword skills can end up on non-sword classes as duds.

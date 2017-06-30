@@ -4,24 +4,29 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 #include <string>
-#include <bitset>
+#include <string.h>		// memset
+#include <bitset>		// std::bitset
 using namespace std;
 
 // Sigurd's base HP.
 // Base HP is my waypoint
-long baseposition = 242280;
+const long baseposition = 242280;
 // Add 0x26 to get to next character
-int characteroffset = 38;
+const int characteroffset = 38;
 // Offset from Base HP to get to HP Growth
-int growthoffset = 19;
+const int growthoffset = 19;
 // Offset from Base HP to get to Skill 1
-int skilloffset = 27;
+const int skilloffset = 27;
 // Independent waypoint for holy blood, centered on Baldur's HP growth.
-int holybloodbaseposition = 231909;
+const int holybloodbaseposition = 231909;
 // Offset from holybloodbase for next entry
-int holybloodoffset = 16;
+const int holybloodoffset = 16;
 // Offset from holybloodbase to get to holyweapon Str bonus. There are only 6 stats to boost here.
-int holyweaponoffset = 8;
+const int holyweaponoffset = 8;
+// The offset preventing sale of holy weapons is 4B2E7. Change from 16 to 00
+const int sellholyweapon = 307943;
+// Offset from baseposition to holy blood 1
+const int bloodoffset = 30;
 
 int main () {
 	
@@ -57,8 +62,8 @@ int main () {
 	{ /* ok, proceed with output */ }
 
 // Load the settings
-	int settings[6];
-	for(int i=0; i<6; i++)
+	int settings[8];
+	for(int i=0; i<8; i++)
 	{
 		char readbuffer = 0;
 		int readbufferInt = 0;
@@ -68,6 +73,12 @@ int main () {
 		settings[i] = readbufferInt - 48; // -48 to make a ascii number into its numerical value
 	}
 	
+	if(settings[6]>0) // Let us sell holy weapons
+	{
+		char writebuffer(0); // Eliminate
+		database.seekp(sellholyweapon); // The
+		database.write(&writebuffer, sizeof(writebuffer)); // Embargo
+	}
 	
 	// -------------------- Holy Blood -------------------------
 
@@ -278,7 +289,7 @@ int main () {
 			nametable.read(&namebuffer, sizeof(namebuffer));
 			log << namebuffer;
 		}
-		
+				
 		// Print stat indincators
 		log << "\n|  HP | Str | Mag | Skl | Spd | Lck | Def | Res |\n|";
 		//-------------------- Base Stats --------------------
@@ -433,15 +444,16 @@ int main () {
 		database.seekp(baseposition+(offset*characteroffset)+bonusoffset+growthoffset+i);
 		database.write(&writebuffer, sizeof(writebuffer));
 		}
+		}
 		
-		
+		// ----------------------- Holy blood allocation and growth logging ----------------------------------------
 		// Find Holy Blood
 		for(int i=0; i<4; i++)
 		{
 			char readbuffer = 0;
 			unsigned char readbufferUnsigned = 0;
 			unsigned int readbufferInt = 0;
-			database.seekg(baseposition+(offset*characteroffset)+bonusoffset+skilloffset+3+i); // Skilloffset +3 is holy blood 1
+			database.seekg(baseposition+(offset*characteroffset)+bonusoffset+bloodoffset+i);
 			database.read(&readbuffer, sizeof(readbuffer));
 			readbufferUnsigned = readbuffer;
 			readbufferInt = readbufferUnsigned;
@@ -454,9 +466,102 @@ int main () {
 				}
 			}
 		}
+		
+		// Allocate holy blood
+		if(settings[7]>0)
+		{
+			int randomnr = rand() % 13 + 0; // Picks a random holy blood
+			int majorcount = 0;
+			int minorcount = 0;
+			if(settings[7]==2) // Everyone 1 major.
+			{
+				memset(hasholyblood, 0, sizeof(hasholyblood)); // Reset hasholyblood
+				hasholyblood[randomnr*2+1] = 1; // Random major
+			}
+			else if(settings[7]==1 || settings[7]==3) // Randomize existing + minor if 1, major if 3 (much bigger difference than it might seem because 1 major > 2 minor in practice)
+			{
+				if(settings[7]==1)
+				{
+					minorcount++;
+				}
+				else if(settings[7]==3)
+				{
+					majorcount++;
+				}
+				
+				for(int i=0; i<13; i++) // Count bloods
+				{
+					if(hasholyblood[i*2+1]>0)
+					{
+						majorcount++;
+						hasholyblood[i*2+1] = 0;
+					}
+					if(hasholyblood[i*2]>0)
+					{
+						minorcount++;
+						hasholyblood[i*2] = 0;
+					}
+				}
+				for(int i=0; i<majorcount; i++) // place major bloods
+				{
+					randomnr = rand() % 13 + 0; // Picks a random holy blood
+					if(hasholyblood[randomnr*2+1]>0) // If this one is already taken, do this loop 1 more time
+					{
+						i--;
+					}
+					else
+					{
+						hasholyblood[randomnr*2+1] = 1;
+					}
+				}
+				for(int i=0; i<(minorcount); i++) // place minor bloods
+				{
+					randomnr = rand() % 13 + 0; // Picks a random holy blood
+					if(hasholyblood[randomnr*2+1]>0) // If this one is already major, do this loop 1 more time
+					{
+						i--;
+					}
+					else if(hasholyblood[randomnr*2]>0) // If this is already minor, make it major instead
+					{
+						hasholyblood[randomnr*2] = 0;
+						hasholyblood[randomnr*2+1] = 1;
+					}
+					else // If it is not major or minor yet, make it minor
+					{
+						hasholyblood[randomnr*2] = 1;
+					}
+				}
+			}
+			else // Crazy mode
+			{
+				// Write crazy numbers to file
+				for(int i=0; i<26; i++)
+				{
+					randomnr = rand() % 2 + 0; // Generate 0 or 1
+					hasholyblood[i] = randomnr;
+				}
+			}
+			
+			// Give the non-crazies their turn to write to file
+			for(int i=0; i<4; i++)
+			{
+				std::bitset<8> bits; // Holy Blood allocation is stored bitwise
+				for(int j=0; j<8; j++)
+				{
+					bits.set(j,hasholyblood[i*8+j]>0); // bits.set("what bit to operate","true/false bool or expression")
+				}
+				unsigned long writebufferLong = bits.to_ulong(); // bitsets are converted to unsigned long form by .to_ulong
+				char writebuffer = writebufferLong;
+				database.seekp(baseposition+(offset*characteroffset)+bonusoffset+bloodoffset+i);
+				database.write(&writebuffer, sizeof(writebuffer));
+			}
 		}
 		
-		// Add Holy Blood bonuses (for the Log)
+		// ---------------- finally back to writing growths to log now --------------------------
+		
+		if(settings[1]>0) // We only write to the growth log in random growths, because we don't actually read the original growths otherwise. Doing it like this seems redundant when random Holy Blood allocation is on, but it needs to work with that off too.
+		{
+		// Add Holy Blood bonuses to growths (for the Log)
 		for(int i=0; i<13; i++) // Check all blood types
 		{
 			// Add minor blood
@@ -509,7 +614,7 @@ int main () {
 			log << "% |";
 		}
 		log << "\n\n";
-		
+		}
 		
 		
 		//-------------------- Skills --------------------
